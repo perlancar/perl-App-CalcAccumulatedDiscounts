@@ -1,5 +1,13 @@
 Revision history for App-CalcAccumulatedDiscounts
 
+0.04    2015-12-17 (PERLANCAR)
+
+        - No functional changes.
+
+        - [build] Rebuild with updated Perinci::To::Doc (0.69) to fix rendering
+          of result in examples in module's POD.
+
+
 0.03    2015-12-17 (PERLANCAR)
 
         - No functional changes.
