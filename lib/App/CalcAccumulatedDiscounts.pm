@@ -38,7 +38,13 @@ _
         },
     },
     examples => [
-        { argv => [] },
+        {
+            args => {},
+        },
+        {
+            summary => 'Modify years and discount rates to generate',
+            args => {years=>[5,10], discounts=>[1,2,2.5]},
+        },
     ],
     result_naked => 1,
 };
