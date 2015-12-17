@@ -17,6 +17,12 @@ $SPEC{calc_accumulated_discounts} = {
 This routine generates a table of accumulated discounts over a period of several
 years, given the annual discount rates.
 
+I first wrote this to visualize the accumulated fees when choosing mutual funds
+products. The moral of the story is, if you plan to hold a fund for a long time
+(e.g. 5-10 years or longer) you should pick funds that are low in annual fees
+(e.g. 1% or lower). Otherwise, the annual management fees will eat up most, if
+not all, your potential profits.
+
 _
     args => {
         years => {
@@ -51,10 +57,10 @@ sub calc_accumulated_discounts {
         $res->[$i][0] = sprintf("%.2f%%", $disc);
         my $j = 0;
         for my $year (@$years) {
+            $j++;
             if ($i == 1) {
                 $res->[0][$j] = $year."y";
             }
-            $j++;
             $res->[$i][$j] = sprintf("%.1f%%", (1 - (1-$disc/100)**$year)*100);
         }
     }
