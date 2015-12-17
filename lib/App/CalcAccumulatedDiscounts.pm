@@ -17,7 +17,7 @@ $SPEC{calc_accumulated_discounts} = {
 This routine generates a table of accumulated discounts over a period of several
 years, given the annual discount rates.
 
-I first wrote this to visualize the accumulated fees when choosing mutual funds
+I first wrote this to see the accumulated fees when choosing mutual funds
 products. The moral of the story is, if you plan to hold a fund for a long time
 (e.g. 5-10 years or longer) you should pick funds that are low in annual fees
 (e.g. 1% or lower). Otherwise, the annual management fees will eat up most, if
