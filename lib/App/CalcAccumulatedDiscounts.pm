@@ -1,6 +1,8 @@
 package App::CalcAccumulatedDiscounts;
 
+# AUTHOR
 # DATE
+# DIST
 # VERSION
 
 use 5.010001;
