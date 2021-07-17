@@ -1,6 +1,6 @@
 package App::CalcAccumulatedDiscounts;
 
-# AUTHOR
+# AUTHORITY
 # DATE
 # DIST
 # VERSION
@@ -49,7 +49,6 @@ _
             args => {years=>[5,10], discounts=>[1,2,2.5]},
         },
     ],
-    result_naked => 1,
 };
 sub calc_accumulated_discounts {
     my %args = @_;
@@ -74,7 +73,9 @@ sub calc_accumulated_discounts {
         }
     }
 
-    $res;
+    [200, "OK", $res, {
+        'table.field_aligns'=>[('number') x @{$res->[0]}],
+    }];
 }
 
 1;
